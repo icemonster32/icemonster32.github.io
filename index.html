@@ -8,14 +8,45 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <button class="rock">Rock</button>
-      <button class="paper">Paper</button>
-      <button class="scissor">Scissor</button>
+      <div class="wrapper">
+         <!-- Start button -->
+         <button id="start"><span>Start Game</span></button>
 
-      
-      <p>Bot : <span id="demo"></span></p>
-      <p id="demo2"></p>
+         <!-- Game instruction -->
+         <div class="game-mechanics">
+            <h1>Rock Paper Scissor</h1>
+            <hr />
+            <div class="mechanic">
+               <h2>Game Mechanics</h2>
+               <p>The game is played with three possible hand signals that represent a rock, paper, and scissors.</p>
+               <br />
+               <p>
+                  The rock is a closed fist; paper is a flat hand with fingers and thumb extended and the palm facing downward; and scissors is a fist with the index and middle fingers fully extended
+                  toward the opposing player.
+               </p>
+               <br />
+               <p>
+                  Rock wins against scissors; paper wins against rock; and scissors wins against paper. If both players throw the same hand signal, it is considered a tie, and play resumes until there
+                  is a clear winner.
+               </p>
+            </div>
+            <hr />
+            <div class="btn">
+               <button id="exit">Exit Game</button>
+               <button id="continue"><span>Continue </span></button>
+            </div>
+         </div>
 
-      <script src="index.js"></script>
+         <!-- Ingame play -->
+         <div class="play-game">
+            <p id="demo2"></p>
+            <p>Bot : <span id="demo"></span></p>
+            <button class="rock">Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissor">Scissor</button>
+
+            <script src="index.js"></script>
+         </div>
+      </div>
    </body>
 </html>

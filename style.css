@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Roboto;
+   background: #be93c5;
+   background: -webkit-linear-gradient(to right, #7bc6cc, #be93c5);
+   background: linear-gradient(to right, #7bc6cc, #be93c5);
+}
+
+.wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+button#start.active{
+    display: none;
+}
+/* Start Button */
+button#start {
+   border-radius: 4px;
+   background: #3550b0;
+   border: none;
+   color: #ffffff;
+   text-align: center;
+   font-size: 28px;
+   padding: 20px;
+   width: 300px;
+   cursor: pointer;
+   margin: 5px;
+   transition: all .5s;
+}
+button#start span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+}
+
+button#start span:after {
+   content: "\00BB";
+   position: absolute;
+   opacity: 0;
+   top: -15px;
+   right: -50px;
+   transition: 0.5s;
+   font-size: 48px;
+}
+
+button#start:hover span {
+   padding-right: 35px;
+}
+
+button#start:hover {
+   background: #253880;
+}
+
+button#start:hover span:after {
+   opacity: 1;
+   right: 0;
+}
+
+/* Game instruction */
+.game-mechanics.active {
+   z-index: 5;
+   opacity: 1;
+   pointer-events: auto;
+   transition: 0.5s;
+}
+
+.game-mechanics {
+   position: absolute;
+   width: 650px;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background: #ffff;
+   opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s;
+}
+
+.game-mechanics h1 {
+   text-align: center;
+   color: #333333;
+   margin-bottom: 20px;
+}
+.mechanic {
+   margin: 15px 0 15px 0;
+}
+.mechanic h2 {
+   margin-bottom: 10px;
+   color: #333333;
+}
+
+.mechanic p {
+   font-size: 18px;
+}
+
+.btn {
+   text-align: end;
+}
+#continue,
+#exit {
+   border-radius: 4px;
+   background: #3550b0;
+   border: 1px solid #3550b0;
+   color: #ffffff;
+   text-align: center;
+   font-size: 18px;
+   padding: 5px;
+   width: 150px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 10px 0 10px 0;
+}
+#continue span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+}
+
+#continue span:after {
+   content: "\00BB";
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -30px;
+   transition: 0.5s;
+}
+
+#continue:hover span {
+   padding-right: 20px;
+}
+
+#continue:hover {
+   background: #253880;
+}
+
+#continue:hover span:after {
+   opacity: 1;
+   right: 0;
+}
+
+#exit {
+   background-color: #f3f3f3;
+   color: #181818;
+   border: 1px solid #3550b0;
+}
+#exit:hover {
+   background: #3550b0;
+   color: #ffffff;
+}
+
+.play-game.active {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+/* Ingame play */
+.play-game {
+   position: absolute;
+   width: 650px;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background: #ffff;
+   opacity: 0;
+   pointer-events: none;
+}
